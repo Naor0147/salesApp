@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="salesApp.PageAddCustomer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:salesApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationSecondaryForegroundThemeBrush}">
+    <Canvas>
+        <TextBlock FontSize="60" Canvas.Left="100" Canvas.Top="160" >First Name</TextBlock>
+        <TextBox  FontSize="60" Width="300" Foreground="Black" Text="0" Height="80" VerticalAlignment="Bottom" x:Name="InputName" Canvas.Left="100" Canvas.Top="250" />
+
+        <TextBlock FontSize="60" Canvas.Left="700" Canvas.Top="160" >Last Name</TextBlock>
+        <TextBox  FontSize="60" Width="300" Foreground="Black" Text="0" Height="80" VerticalAlignment="Center" x:Name="InputPrice" Canvas.Left="700" Canvas.Top="250" HorizontalAlignment="Center" />
+
+        <TextBlock x:Name="ResultTxt" FontSize="60" Foreground="Black" Text="0" Height="99" VerticalAlignment="Center" HorizontalAlignment="Left" Canvas.Left="531" Canvas.Top="611" Width="217" ></TextBlock>
+        <Button x:Name="showButton" FontSize="80px" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="showButton_Click" Canvas.Left="1104" Canvas.Top="571" >Add</Button>
+        <Button x:Name="goBack" FontSize="80px" Click="goBack_Click" Canvas.Top="586" VerticalAlignment="Top" HorizontalAlignment="Center" >Go back</Button>
+    </Canvas>
+</Page>

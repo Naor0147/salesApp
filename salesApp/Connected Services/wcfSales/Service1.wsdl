@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WcfSaleSys/Service1/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WcfSaleSys/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WcfSaleSys/Service1/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfSaleSys.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_AddProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddProduct" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddSale_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSale" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddSale_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSaleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowAllProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowAllProduct" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowAllProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowAllProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowProductById_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowProductById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowProductById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowProductByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowAllCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowAllCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowAllCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowAllCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowAllSales_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowAllSales" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowAllSales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowAllSalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_showSaleById_InputMessage">
+    <wsdl:part name="parameters" element="tns:showSaleById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_showSaleById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:showSaleByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AvgQuantity_InputMessage">
+    <wsdl:part name="parameters" element="tns:AvgQuantity" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AvgQuantity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AvgQuantityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updatePriceProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:updatePriceProduct" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updatePriceProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updatePriceProductResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="AddProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddProduct" message="tns:IService1_AddProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddProductResponse" message="tns:IService1_AddProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddCustomer" message="tns:IService1_AddCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddCustomerResponse" message="tns:IService1_AddCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSale">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddSale" message="tns:IService1_AddSale_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddSaleResponse" message="tns:IService1_AddSale_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowAllProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowAllProduct" message="tns:IService1_ShowAllProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowAllProductResponse" message="tns:IService1_ShowAllProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowProductById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowProductById" message="tns:IService1_ShowProductById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowProductByIdResponse" message="tns:IService1_ShowProductById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowAllCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowAllCustomer" message="tns:IService1_ShowAllCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowAllCustomerResponse" message="tns:IService1_ShowAllCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowAllSales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowAllSales" message="tns:IService1_ShowAllSales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowAllSalesResponse" message="tns:IService1_ShowAllSales_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="showSaleById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/showSaleById" message="tns:IService1_showSaleById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/showSaleByIdResponse" message="tns:IService1_showSaleById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AvgQuantity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AvgQuantity" message="tns:IService1_AvgQuantity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AvgQuantityResponse" message="tns:IService1_AvgQuantity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePriceProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/updatePriceProduct" message="tns:IService1_updatePriceProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updatePriceProductResponse" message="tns:IService1_updatePriceProduct_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddProduct">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomer">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSale">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddSale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowAllProduct">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowAllProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowProductById">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowProductById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowAllCustomer">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowAllCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowAllSales">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowAllSales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showSaleById">
+      <soap:operation soapAction="http://tempuri.org/IService1/showSaleById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AvgQuantity">
+      <soap:operation soapAction="http://tempuri.org/IService1/AvgQuantity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePriceProduct">
+      <soap:operation soapAction="http://tempuri.org/IService1/updatePriceProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WcfSaleSys/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
